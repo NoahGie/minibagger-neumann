@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minibaggervermietung Christoph Neumann – Bagger & Radlader mieten in Sassenburg</title>
+  <meta name="description" content="Minibaggervermietung Christoph Neumann in Sassenburg. Radlader und Minibagger zu fairen Preisen mieten. Persönlich, zuverlässig, handwerklich." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:           #f4ecdd;
+      --bg-alt:       #ebe0c8;
+      --paper:        #fbf6ea;
+      --ink:          #2b1f14;
+      --ink-soft:     #4a3a28;
+      --accent:       #8a4b1e;   /* gebranntes Siena */
+      --accent-dark:  #6a3615;
+      --gold:         #b9862f;
+      --line:         #b8a078;
+      --shadow:       0 10px 30px rgba(60, 40, 20, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 100% -200px, #e8d8b6 0%, transparent 60%),
+        radial-gradient(900px 400px at -100px 300px, #e8d8b6 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Oswald', 'Merriweather', serif;
+      letter-spacing: .5px;
+      color: var(--ink);
+      margin: 0 0 .5em;
+      text-transform: uppercase;
+    }
+
+    h1 { font-size: clamp(2rem, 4.5vw, 3.3rem); line-height: 1.1; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    h3 { font-size: 1.3rem; }
+
+    a { color: var(--accent-dark); }
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 246, 234, 0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .logo img {
+      height: 128px;
+      width: auto;
+      display: block;
+      border: 2px solid var(--ink);
+      border-radius: 2px;
+      box-shadow: 0 2px 0 var(--ink);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 24px;
+      background: var(--accent);
+      color: #fff8ea;
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      font-size: .95rem;
+      border: 2px solid var(--accent-dark);
+      border-radius: 2px;
+      box-shadow: 0 4px 0 var(--accent-dark);
+      transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 var(--accent-dark);
+    }
+    .btn:active { transform: translateY(4px); box-shadow: none; }
+
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-kicker {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: .9rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-kicker::before {
+      content: "";
+      display: inline-block;
+      width: 40px; height: 2px;
+      background: var(--accent);
+    }
+    .hero p.lead {
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin-bottom: 32px;
+    }
+    .hero-visual {
+      background: linear-gradient(135deg, #c9a66b 0%, #8a6b3d 100%);
+      border: 3px solid var(--ink);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px dashed rgba(255,255,255,.45);
+      pointer-events: none;
+    }
+    .hero-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: sepia(.15) saturate(1.05);
+    }
+    .hero-badge {
+      position: absolute;
+      top: -18px; right: -18px;
+      background: var(--ink);
+      color: var(--bg);
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: .75rem;
+      line-height: 1.15;
+      padding: 10px;
+      border: 2px solid var(--gold);
+      transform: rotate(-8deg);
+      box-shadow: var(--shadow);
+    }
+    .hero-badge strong { font-size: 1.1rem; display: block; color: var(--gold); }
+
+    /* ---------- SECTION ---------- */
+    section {
+      padding: 80px 24px;
+    }
+    .section-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header .kicker {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--accent);
+      font-size: .85rem;
+      margin-bottom: 10px;
+    }
+    .section-header p {
+      max-width: 60ch;
+      margin: 12px auto 0;
+      color: var(--ink-soft);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 16px 0 32px;
+      color: var(--accent);
+    }
+    .divider::before, .divider::after {
+      content: "";
+      flex: 0 0 60px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ---------- WHY ---------- */
+    #werte { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .werte-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .wert {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .wert-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 18px;
+      background: var(--ink);
+      color: var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--gold);
+    }
+    .wert-icon svg { width: 28px; height: 28px; }
+    .wert h3 { margin-bottom: 8px; }
+    .wert p { margin: 0; color: var(--ink-soft); }
+
+    /* ---------- PRODUCTS ---------- */
+    .products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .product {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      overflow: hidden;
+    }
+    .product-gallery {
+      background: #3a2a1a;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+    }
+    .carousel .slides {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      width: 100%;
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .carousel .slides::-webkit-scrollbar { display: none; }
+    .carousel .slides img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+      user-select: none;
+      -webkit-user-drag: none;
+      display: block;
+    }
+    .carousel.contain .slides img {
+      object-fit: contain;
+      background: #000;
+    }
+    .carousel .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: rgba(43, 31, 20, 0.75);
+      color: var(--gold);
+      font-size: 22px;
+      font-family: 'Oswald', sans-serif;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background .2s ease, transform .15s ease;
+      backdrop-filter: blur(4px);
+      z-index: 3;
+    }
+    .carousel .nav:hover { background: var(--ink); transform: translateY(-50%) scale(1.08); }
+    .carousel .nav.prev { left: 12px; }
+    .carousel .nav.next { right: 12px; }
+    .carousel .nav svg { width: 20px; height: 20px; }
+    .carousel .dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 3;
+      background: rgba(43, 31, 20, 0.6);
+      padding: 6px 10px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+    }
+    .carousel .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,248,234,.45);
+      cursor: pointer;
+      padding: 0;
+      transition: background .2s ease, width .2s ease;
+    }
+    .carousel .dot.active {
+      background: var(--gold);
+      width: 20px;
+      border-radius: 4px;
+    }
+    .carousel .counter {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(43, 31, 20, 0.7);
+      color: var(--bg);
+      font-family: 'Oswald', sans-serif;
+      font-size: .8rem;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 2px;
+      z-index: 3;
+      border: 1px solid var(--gold);
+    }
+
+    .product-body {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-tag {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .75rem;
+      color: var(--accent);
+      background: rgba(138,75,30,.08);
+      padding: 4px 10px;
+      border: 1px solid var(--accent);
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+    .product h2 { margin-bottom: 12px; }
+    .product-desc { color: var(--ink-soft); margin-bottom: 22px; }
+
+    .specs {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+      border-top: 1px dashed var(--line);
+      border-bottom: 1px dashed var(--line);
+      padding: 18px 0;
+    }
+    .specs li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .95rem;
+    }
+    .specs li svg { color: var(--accent); flex-shrink: 0; }
+    .specs li strong { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: .5px; }
+
+    .price-table {
+      margin: 0 0 26px;
+      border-collapse: collapse;
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
+    .price-table th, .price-table td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table th {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 1.5px;
+      color: var(--ink-soft);
+      background: var(--bg-alt);
+    }
+    .price-table .amount {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-align: right;
+    }
+    .price-table .highlight td {
+      background: rgba(185, 134, 47, .12);
+    }
+
+    .product-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .product-note {
+      font-size: .85rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ---------- CONTACT ---------- */
+    #kontakt {
+      background: var(--ink);
+      color: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #kontakt::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(500px 300px at 20% 20%, rgba(185,134,47,.18) 0%, transparent 60%),
+        radial-gradient(500px 300px at 80% 80%, rgba(138,75,30,.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    #kontakt h2, #kontakt .kicker { color: var(--gold); }
+    #kontakt p { color: #e7d9bb; max-width: 60ch; margin-left: auto; margin-right: auto; }
+    .contact-card {
+      position: relative;
+      margin: 40px auto 0;
+      max-width: 560px;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 40px;
+      border: 2px solid var(--gold);
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+    .contact-card h3 { text-align: center; margin-bottom: 20px; }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line);
+      color: var(--ink-soft);
+    }
+    .contact-row:last-of-type { border-bottom: none; }
+    .contact-row svg { color: var(--accent); flex-shrink: 0; }
+    .contact-row a { color: var(--ink); text-decoration: none; font-weight: 700; }
+    .contact-row a:hover { color: var(--accent); }
+
+    .contact-card .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #1a110a;
+      color: #bfae8e;
+      padding: 40px 24px 30px;
+      text-align: center;
+      font-size: .9rem;
+      border-top: 3px solid var(--gold);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer p { margin: 6px 0; }
+    .footer-meta {
+      margin-top: 18px;
+      font-size: .78rem;
+      opacity: .7;
+    }
+    .footer-meta a {
+      color: #bfae8e;
+      margin: 0 8px;
+    }
+    .footer-meta a:hover { color: var(--gold); }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding: 50px 20px; gap: 40px; }
+      .hero-visual { order: -1; }
+      .werte-grid { grid-template-columns: 1fr; }
+      .product { grid-template-columns: 1fr; }
+      .product-body { padding: 28px; }
+      .specs { grid-template-columns: 1fr; }
+      section { padding: 60px 20px; }
+      .logo img { height: 104px; }
+      header .btn { padding: 10px 14px; font-size: .75rem; letter-spacing: 1px; }
+      header .btn .btn-text { display: none; }
+      .header-actions { gap: 8px; }
+      .carousel, .carousel .slides img { min-height: 320px; }
+    }
+    @media (max-width: 480px) {
+      .logo img { height: 88px; }
+      .contact-card { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <a href="#top" class="logo" aria-label="Minibaggervermietung Christoph Neumann – Startseite">
+        <img src="logo.png" alt="Minibaggervermietung Christoph Neumann – 0152 264 12345" />
+      </a>
+      <div class="header-actions">
+        <a href="tel:+4915226412345" class="btn" aria-label="Jetzt anrufen 0152 26412345">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="btn-text">Jetzt anrufen 0152&nbsp;26412345</span>
+        </a>
+        <a href="mailto:info@neumann-minibagger.de?subject=Anfrage%20Mietger%C3%A4t&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20ein%20Mietger%C3%A4t%20und%20h%C3%A4tte%20folgende%20Anfrage%3A%0A%0A"
+           class="btn" aria-label="Kontakt aufnehmen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="btn-text">Kontakt aufnehmen</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Handwerk · Verlässlichkeit · Sassenburg</div>
+        <h1>Bagger & Radlader mieten – persönlich und fair.</h1>
+        <p class="lead">
+          Willkommen bei der Minibaggervermietung <strong>Christoph Neumann</strong>.
+          Seit Jahren vermiete ich kompakte Baumaschinen an Heimwerker, Landschaftsbauer
+          und Bauunternehmen in der Region Sassenburg, Gifhorn und Wolfsburg. Transportierbar
+          mit PKW-Anhänger, sauber gewartet und mit einer ordentlichen Einweisung übergeben.
+        </p>
+        <a href="#produkte" class="btn btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          <span class="btn-text">Zur Vermietung</span>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/61/6121e36e-37ca-4a4d-988e-efcf6ae94a1e?rule=$_59.JPG"
+             alt="Zeppelin ZL 25 Radlader" />
+        <div class="hero-badge">
+          Seit Jahren<strong>im Einsatz</strong>in der Region
+        </div>
+      </div>
+    </section>
+
+    <!-- WERTE -->
+    <section id="werte">
+      <div class="section-wrap">
+        <div class="section-header">
+          <div class="kicker">Warum bei mir mieten</div>
+          <h2>Handschlag statt Hotline</h2>
+          <div class="divider">✦</div>
+          <p>Als gewerblicher Einzelvermieter kümmere ich mich persönlich um jede Vermietung – vom ersten Anruf bis zur Rückgabe.</p>
+        </div>
+
+        <div class="werte-grid">
+          <div class="wert">
+            <div class="wert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Persönlicher Service</h3>
+            <p>Beratung, Einweisung und Übergabe macht der Inhaber – kein Callcenter, keine Schichtwechsel.</p>
+          </div>
+          <div class="wert">
+            <div class="wert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Flexible Mietzeiten</h3>
+            <p>Tages-, Wochenend- und Wochentarife. Ideal für kurze Heimwerker-Projekte oder längere Bauvorhaben.</p>
+          </div>
+          <div class="wert">
+            <div class="wert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Einfach zu transportieren</h3>
+            <p>Alle Geräte passen auf einen gängigen PKW-Anhänger. Praktisch für enge Zufahrten und schmale Grundstücke.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUKTE -->
+    <section id="produkte">
+      <div class="section-wrap">
+        <div class="section-header">
+          <div class="kicker">Aktuelle Mietgeräte</div>
+          <h2>Unsere Maschinen</h2>
+          <div class="divider">✦</div>
+          <p>Geprüft, einsatzbereit, fair bepreist. Bei Fragen zum Einsatzgebiet oder zur Bedienung – einfach kurz melden.</p>
+        </div>
+
+        <div class="products">
+
+          <!-- PRODUCT 1 — Zeppelin ZL 25 -->
+          <article class="product">
+            <div class="product-gallery">
+              <div class="carousel" data-carousel>
+                <div class="slides">
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/61/6121e36e-37ca-4a4d-988e-efcf6ae94a1e?rule=$_59.JPG" alt="Zeppelin ZL 25 – Ansicht 1" loading="lazy" />
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/fa/faa21f7d-66dd-4274-99ca-f1f50cc3a3b8?rule=$_59.JPG" alt="Zeppelin ZL 25 – Ansicht 2" loading="lazy" />
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/62/622b98cc-e8d9-4920-967f-a12aa67b0546?rule=$_59.JPG" alt="Zeppelin ZL 25 – Ansicht 3" loading="lazy" />
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a1/a1371c91-295e-4051-b86a-fe9ee2cc777c?rule=$_59.JPG" alt="Zeppelin ZL 25 – Ansicht 4" loading="lazy" />
+                </div>
+                <button class="nav prev" aria-label="Vorheriges Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="nav next" aria-label="Nächstes Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="counter"><span class="current">1</span> / <span class="total">4</span></div>
+                <div class="dots"></div>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <span class="product-tag">Radlader · 2,5&nbsp;t</span>
+              <h2>Zeppelin ZL 25</h2>
+              <p class="product-desc">
+                Kompakter Radlader mit 2,5&nbsp;Tonnen Gewicht, der bequem auf einem PKW-Anhänger
+                transportiert werden kann. Ideal für enge und schmale Grundstücke. Inklusive
+                Palettengabel und einer 0,5&nbsp;m³ Schaufel – damit ist er auf dem Hof, im Garten
+                und auf der Baustelle vielseitig einsetzbar.
+              </p>
+
+              <ul class="specs">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3 3 21"/><path d="M3 7V3h4"/><path d="M17 21h4v-4"/></svg>
+                  <span><strong>Breite:</strong> 1,40&nbsp;m</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><polyline points="6 9 12 3 18 9"/><polyline points="6 15 12 21 18 15"/></svg>
+                  <span><strong>Höhe:</strong> 2,33&nbsp;m</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V7h13l4 5v5h-1"/></svg>
+                  <span><strong>Transport:</strong> PKW-Anhänger</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
+                  <span><strong>Anbauteile:</strong> Palettengabel, 0,5&nbsp;m³ Schaufel</span>
+                </li>
+              </ul>
+
+              <table class="price-table">
+                <thead>
+                  <tr><th>Mietdauer</th><th style="text-align:right;">Preis</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tagesmiete</td>
+                    <td class="amount">119&nbsp;€</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td>Wochenende (Fr&nbsp;–&nbsp;So)</td>
+                    <td class="amount">222&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Woche (z.&nbsp;B. Mo&nbsp;–&nbsp;So)</td>
+                    <td class="amount">600&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Kaution</td>
+                    <td class="amount">500&nbsp;€</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="product-foot">
+                <span class="product-note">Preise inkl. Anbauteile · zzgl. ges. MwSt.</span>
+                <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage%20Zeppelin%20ZL%2025&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20den%20Radlader%20Zeppelin%20ZL%2025%20mieten.%0A%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+                   class="btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Jetzt anfragen
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 2 — CAT 301.6 Minibagger -->
+          <article class="product">
+            <div class="product-gallery">
+              <div class="carousel contain" data-carousel>
+                <div class="slides">
+                  <img src="cat-301-6.jpg" alt="CAT 301.6 Minibagger-Flotte" />
+                </div>
+                <button class="nav prev" aria-label="Vorheriges Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="nav next" aria-label="Nächstes Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="counter"><span class="current">1</span> / <span class="total">1</span></div>
+                <div class="dots"></div>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <span class="product-tag">Minibagger · 1,9&nbsp;t</span>
+              <h2>CAT 301.6</h2>
+              <p class="product-desc">
+                Der kompakte CAT 301.6 Minibagger mit 1,9&nbsp;Tonnen Einsatzgewicht. Wendig, leistungsstark
+                und einfach zu bedienen – perfekt für Garten-, Landschafts- und Tiefbauarbeiten. Im
+                Standard-Lieferumfang bereits ein 1&nbsp;m-Löffel und ein kleiner 30–40&nbsp;cm Grabenlöffel
+                enthalten. Anlieferung oder Selbstabholung möglich.
+              </p>
+
+              <ul class="specs">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M6 6l-3 6 3 6"/><path d="M18 6l3 6-3 6"/></svg>
+                  <span><strong>Gewicht:</strong> 1,9&nbsp;t</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>
+                  <span><strong>Standard:</strong> 1&nbsp;m + 30–40&nbsp;cm Löffel</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l5 3"/></svg>
+                  <span><strong>Option:</strong> hydraulischer Schwenklöffel 1&nbsp;m</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21h16"/><path d="M6 21V9l6-5 6 5v12"/></svg>
+                  <span><strong>Option:</strong> Roderechen 30–60&nbsp;cm</span>
+                </li>
+              </ul>
+
+              <table class="price-table">
+                <thead>
+                  <tr><th>Mietdauer</th><th style="text-align:right;">Preis</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tagesmiete (Wochentag)</td>
+                    <td class="amount">111&nbsp;€</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td>Wochenende (Fr&nbsp;–&nbsp;So)</td>
+                    <td class="amount">199&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Kaution</td>
+                    <td class="amount">500&nbsp;€</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="product-foot">
+                <span class="product-note">Anlieferung & Selbstabholung möglich · zzgl. ges. MwSt.</span>
+                <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage%20CAT%20301.6%20Minibagger&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20den%20Minibagger%20CAT%20301.6%20mieten.%0A%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+                   class="btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Jetzt anfragen
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 3 — Scherenarbeitsbühne 8m -->
+          <article class="product">
+            <div class="product-gallery">
+              <div class="carousel" data-carousel>
+                <div class="slides">
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/2b/2b136379-0454-4d5e-9338-72bfd8b392cd?rule=$_59.JPG" alt="Scherenarbeitsbühne 8m – Ansicht 1" loading="lazy" />
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/67/67493997-7709-49b7-b68d-5d313507fdc6?rule=$_59.JPG" alt="Scherenarbeitsbühne 8m – Ansicht 2" loading="lazy" />
+                </div>
+                <button class="nav prev" aria-label="Vorheriges Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="nav next" aria-label="Nächstes Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="counter"><span class="current">1</span> / <span class="total">2</span></div>
+                <div class="dots"></div>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <span class="product-tag">Arbeitsbühne · 8&nbsp;m</span>
+              <h2>Scherenarbeitsbühne 8&nbsp;m</h2>
+              <p class="product-desc">
+                Kompakte Scherenarbeitsbühne mit 8&nbsp;m Arbeitshöhe. Dank schmaler Bauweise (81&nbsp;cm Breite)
+                ideal für Innenräume, Lagerhallen und Gartenarbeiten in der Höhe. Selbstabholung auf
+                dem Anhänger oder Anlieferung durch mich – ganz wie es passt.
+              </p>
+
+              <ul class="specs">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><polyline points="6 9 12 3 18 9"/></svg>
+                  <span><strong>Arbeitshöhe:</strong> 8&nbsp;m</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3 3 21"/><path d="M3 7V3h4"/><path d="M17 21h4v-4"/></svg>
+                  <span><strong>Breite:</strong> 81&nbsp;cm</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V5"/><path d="M16 8V5"/></svg>
+                  <span><strong>Länge:</strong> ca. 2&nbsp;m</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                  <span><strong>Gewicht:</strong> 1.500&nbsp;kg</span>
+                </li>
+              </ul>
+
+              <table class="price-table">
+                <thead>
+                  <tr><th>Mietdauer</th><th style="text-align:right;">Preis</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight">
+                    <td>Tagesmiete</td>
+                    <td class="amount">88&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Wochenend- & Wochentarif</td>
+                    <td class="amount">auf Anfrage</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="product-foot">
+                <span class="product-note">Selbstabholung oder Anlieferung · zzgl. ges. MwSt.</span>
+                <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage%20Scherenarbeitsb%C3%BChne%208m&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20die%20Scherenarbeitsb%C3%BChne%20(8%20m)%20mieten.%0A%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+                   class="btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Jetzt anfragen
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 4 — Rüttelplatte Weber CF2 HD -->
+          <article class="product">
+            <div class="product-gallery">
+              <div class="carousel" data-carousel>
+                <div class="slides">
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/90/90f0719e-2985-43ee-a2f5-e20f92032f72?rule=$_59.JPG" alt="Weber CF2 HD Rüttelplatte" loading="lazy" />
+                </div>
+                <button class="nav prev" aria-label="Vorheriges Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="nav next" aria-label="Nächstes Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="counter"><span class="current">1</span> / <span class="total">1</span></div>
+                <div class="dots"></div>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <span class="product-tag">Rüttelplatte · 90&nbsp;kg</span>
+              <h2>Weber CF2 HD</h2>
+              <p class="product-desc">
+                Neue Weber Rüttelplatte CF2 HD mit ca. 90&nbsp;kg Betriebsgewicht – inklusive Gummimatte
+                zum Verdichten von Pflastersteinen ohne Beschädigung. Kraftvoller Honda-4-Takt-Benzinmotor,
+                zuverlässig und wartungsarm. Ideal für Pflaster-, Garten- und Wegebauarbeiten.
+              </p>
+
+              <ul class="specs">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  <span><strong>Zentrifugalkraft:</strong> 15&nbsp;kN</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/></svg>
+                  <span><strong>Leistung:</strong> 3,6&nbsp;kW</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M6 6l-3 6 3 6"/><path d="M18 6l3 6-3 6"/></svg>
+                  <span><strong>Arbeitsbreite:</strong> 450&nbsp;mm</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9l7-7 7 7"/><path d="M12 2v20"/></svg>
+                  <span><strong>Vorschub:</strong> bis 26&nbsp;m/min</span>
+                </li>
+              </ul>
+
+              <table class="price-table">
+                <thead>
+                  <tr><th>Mietdauer</th><th style="text-align:right;">Preis</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight">
+                    <td>Tagesmiete</td>
+                    <td class="amount">29&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Wochenend- & Wochentarif</td>
+                    <td class="amount">auf Anfrage</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="product-foot">
+                <span class="product-note">Inkl. Gummimatte · zzgl. ges. MwSt.</span>
+                <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage%20R%C3%BCttelplatte%20Weber%20CF2%20HD&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20die%20R%C3%BCttelplatte%20Weber%20CF2%20HD%20mieten.%0A%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+                   class="btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Jetzt anfragen
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 5 — Bautrockner / Luftentfeuchter -->
+          <article class="product">
+            <div class="product-gallery">
+              <div class="carousel" data-carousel>
+                <div class="slides">
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/b8/b8c5174a-8179-4e1e-96ce-d34095c52796?rule=$_59.JPG" alt="Bautrockner Luftentfeuchter – Ansicht 1" loading="lazy" />
+                  <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/73/73f99e32-7f30-479c-8315-2c338ec57724?rule=$_59.JPG" alt="Bautrockner Luftentfeuchter – Ansicht 2" loading="lazy" />
+                </div>
+                <button class="nav prev" aria-label="Vorheriges Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="nav next" aria-label="Nächstes Bild">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="counter"><span class="current">1</span> / <span class="total">2</span></div>
+                <div class="dots"></div>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <span class="product-tag">Bautrockner · ab 8&nbsp;€</span>
+              <h2>Bautrockner & Luftentfeuchter</h2>
+              <p class="product-desc">
+                Verschiedene Bautrockner zur Miete – wahlweise mit integriertem Tank oder mit direktem
+                Ablaufschlauch für den Dauereinsatz. Entfeuchtungsleistung bis zu 80&nbsp;l in 24&nbsp;h.
+                Perfekt nach Wasserschaden, beim Estrich-Trocknen oder in feuchten Kellern.
+              </p>
+
+              <ul class="specs">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"/><path d="M12 22a7 7 0 0 0 7-7c0-2-1-4-3-6s-4-5-4-7c0 2-2 5-4 7s-3 4-3 6a7 7 0 0 0 7 7z"/></svg>
+                  <span><strong>Leistung:</strong> bis 80&nbsp;l / 24&nbsp;h</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg>
+                  <span><strong>Varianten:</strong> Tank oder Ablauf</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3z"/><path d="M5 7v14h14V7"/></svg>
+                  <span><strong>Einsatz:</strong> Estrich, Keller, Wasserschaden</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                  <span><strong>Dauerbetrieb:</strong> möglich</span>
+                </li>
+              </ul>
+
+              <table class="price-table">
+                <thead>
+                  <tr><th>Mietdauer</th><th style="text-align:right;">Preis</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight">
+                    <td>Tagesmiete</td>
+                    <td class="amount">ab&nbsp;8&nbsp;€</td>
+                  </tr>
+                  <tr>
+                    <td>Wochen- & Langzeitmiete</td>
+                    <td class="amount">auf Anfrage</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="product-foot">
+                <span class="product-note">Mehrere Geräte gleichzeitig verfügbar · zzgl. ges. MwSt.</span>
+                <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage%20Bautrockner%20%2F%20Luftentfeuchter&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20einen%20Bautrockner%20%2F%20Luftentfeuchter%20mieten.%0A%0AAnzahl%20Ger%C3%A4te%3A%20%0AEinsatzzweck%3A%20%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+                   class="btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Jetzt anfragen
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Weitere Produkte können hier als identischer <article class="product">-Block ergänzt werden -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="section-wrap">
+        <div class="section-header">
+          <div class="kicker">Kontakt</div>
+          <h2>Kurz melden – schnell auf der Baustelle</h2>
+          <div class="divider" style="color:var(--gold);">✦</div>
+          <p>Schreiben Sie mir eine E-Mail mit Wunschgerät und Zeitraum. Ich melde mich in der Regel am selben Tag zurück.</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Ihr Ansprechpartner</h3>
+          <div class="contact-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div>Christoph Neumann</div>
+          </div>
+          <div class="contact-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>Heinrich-Drögemüller-Weg 4<br />38524 Sassenburg</div>
+          </div>
+          <div class="contact-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+4915226412345">0152&nbsp;26412345</a>
+          </div>
+          <div class="contact-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@neumann-minibagger.de">info@neumann-minibagger.de</a>
+          </div>
+
+          <a href="mailto:info@neumann-minibagger.de?subject=Mietanfrage&body=Hallo%20Herr%20Neumann%2C%0A%0Aich%20m%C3%B6chte%20ein%20Mietger%C3%A4t%20anfragen.%0A%0AWunschger%C3%A4t%3A%20%0AWunschzeitraum%3A%20%0AEinsatzort%3A%20%0AName%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank%20und%20viele%20Gr%C3%BC%C3%9Fe"
+             class="btn btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Minibaggervermietung Christoph Neumann</strong></p>
+    <p>Heinrich-Drögemüller-Weg 4 · 38524 Sassenburg · Tel. <a href="tel:+4915226412345">0152&nbsp;26412345</a> · <a href="mailto:info@neumann-minibagger.de">info@neumann-minibagger.de</a></p>
+    <p>&copy; <span id="yr"></span> Christoph Neumann · Alle Rechte vorbehalten.</p>
+    <div class="footer-meta">
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ---------- Swipeable Carousel ----------
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+      const slides = carousel.querySelector('.slides');
+      const imgs = slides.querySelectorAll('img');
+      const prev = carousel.querySelector('.nav.prev');
+      const next = carousel.querySelector('.nav.next');
+      const dots = carousel.querySelector('.dots');
+      const current = carousel.querySelector('.counter .current');
+      const total = imgs.length;
+
+      // Hide nav when only 1 image
+      if (total <= 1) {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+        dots.style.display = 'none';
+        carousel.querySelector('.counter').style.display = 'none';
+        return;
+      }
+
+      // Build dots
+      imgs.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Bild ' + (i + 1));
+        dot.addEventListener('click', () => {
+          slides.scrollTo({ left: slides.clientWidth * i, behavior: 'smooth' });
+        });
+        dots.appendChild(dot);
+      });
+
+      const getIndex = () => Math.round(slides.scrollLeft / slides.clientWidth);
+
+      prev.addEventListener('click', () => {
+        const i = Math.max(0, getIndex() - 1);
+        slides.scrollTo({ left: slides.clientWidth * i, behavior: 'smooth' });
+      });
+      next.addEventListener('click', () => {
+        const i = Math.min(total - 1, getIndex() + 1);
+        slides.scrollTo({ left: slides.clientWidth * i, behavior: 'smooth' });
+      });
+
+      let tick = null;
+      slides.addEventListener('scroll', () => {
+        if (tick) cancelAnimationFrame(tick);
+        tick = requestAnimationFrame(() => {
+          const idx = getIndex();
+          current.textContent = idx + 1;
+          dots.querySelectorAll('.dot').forEach((d, i) => {
+            d.classList.toggle('active', i === idx);
+          });
+        });
+      });
+
+      // Keyboard support when carousel has focus
+      carousel.setAttribute('tabindex', '0');
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); prev.click(); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); }
+      });
+
+      // For contain-carousels: dynamically size height to currently-visible image
+      if (carousel.classList.contains('contain')) {
+        const sizeToCurrent = () => {
+          const w = slides.clientWidth;
+          if (!w) return;
+          const idx = Math.round(slides.scrollLeft / Math.max(1, slides.clientWidth));
+          const img = imgs[idx] || imgs[0];
+          if (!img || !img.naturalWidth || !img.naturalHeight) return;
+          const h = (img.naturalHeight / img.naturalWidth) * w;
+          carousel.style.minHeight = Math.round(h) + 'px';
+          slides.style.height = Math.round(h) + 'px';
+          imgs.forEach(i => { i.style.minHeight = '0'; i.style.height = '100%'; });
+        };
+        imgs.forEach(img => {
+          if (!img.complete) img.addEventListener('load', sizeToCurrent, { once: true });
+        });
+        sizeToCurrent();
+        slides.addEventListener('scroll', () => {
+          if (tick) cancelAnimationFrame(tick);
+          requestAnimationFrame(sizeToCurrent);
+        });
+        window.addEventListener('resize', sizeToCurrent);
+      }
+    });
+  </script>
+</body>
+</html>
